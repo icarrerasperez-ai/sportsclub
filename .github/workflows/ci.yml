@@ -146,7 +146,7 @@ jobs:
 
       - name: Run migrations in container
         run: |
-          docker compose exec -T app-blue python sportsclub/manage.py migrate
+          docker compose exec -T app-blue python manage.py migrate
 
       - name: Test API endpoint (blue)
         run: |
