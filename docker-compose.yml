@@ -80,7 +80,6 @@ services:
     build:
       context: .
       dockerfile: docker/nginx/Dockerfile
-    image: nginx:stable-trixie
     ports:
       - "8000:80"
     networks:
