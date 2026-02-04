@@ -21,7 +21,7 @@ asgiref==3.11.0 \
     #   -r requirements.in
     #   django
     #   django-cors-headers
-django==6.0 \
+django==6.0.2 \
     --hash=sha256:1cc2c7344303bbfb7ba5070487c17f7fc0b7174bbb0a38cebf03c675f5f19b6d \
     --hash=sha256:7b0c1f50c0759bbe6331c6a39c89ae022a84672674aeda908784617ef47d8e26
     # via

@@ -106,6 +106,7 @@ Una vez descomprimido desde nuestro proyecto lanzamos el siguiente comando:
 ### Pipeline
 Para añadirlo en la Pipeline tendremos que añadir dentro del fichero *ci.yml*
 ```yml
+# Extraido del repositorio oficial de la herramienta (https://github.com/dependency-check/Dependency-Check_Action)
 jobs:
   depchecktest:
     runs-on: ubuntu-latest
@@ -133,3 +134,17 @@ jobs:
            path: ${{github.workspace}}/reports
 
 ```
+
+Al lanzar el commit si vamos a *Actions* > *Owasp v2* (Es decir en nombre del commit que hemos puesto) podemos ver como carga el actions.
+![[Pasted image 20260204194054.png]]
+
+En mi caso aparece el Job Lint que falla por alguna cosa del ruff, mientras que el que hemos creado nosotros *depecheck_test* nos aparece como completado con exito.
+Si entramos veremos:
+![[Pasted image 20260204194315.png]]
+Esta imagen muestra el WorkFlow que ha seguido el Job para ejecutarse.
+
+Ahora el *report* se genera en el apartado donde aparece el esquema con los jobs scroleando hasta encontrar el apartado *artifacts*.
+![[Pasted image 20260204195601.png]]
+
+Esto nos descargara un `.zip` que si lo descomprimimos nos dara el fichero `.html` con el contenido de la pagina del *report*.
+![[Pasted image 20260204195809.png]]
