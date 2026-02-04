@@ -33,7 +33,7 @@ Lo he vuelto a revisar un dia despues y resulta que si que ha aparecido contenid
 Como se ve aparecen diferentes vulnerabilidades de *SQL Injection* a las cuales si accedemos podemos visualizar que le pasa.
 ![[Pasted image 20260204185816.png]]
 
-Esta alerta nos informa de que tenemos una version de *django* vulnerable `(6.0a1)` y nos sugiere que la cambiemos a `6.0.2` que ya tiene la Vuln parcheada.
+Esta alerta nos informa de que tenemos una version de *django* vulnerable `(6.0.1)` y nos sugiere que la cambiemos a `6.0.2` que ya tiene la Vuln parcheada.
 
 ### ¿Hace falta cambiar algo?
 Como el fichero requirements.txt ya tiene las versiones escritas y los hashes creados no creo oportuno añadir nada mas, como mucho añadirlo en el CI pero este ya se lanza automaticamente asique lo veo innecesario.

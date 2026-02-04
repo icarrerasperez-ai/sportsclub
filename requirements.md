@@ -3,7 +3,7 @@
 #### Objetivos
 - [x] *requirements.txt* mejorado
 - [x] *requirements.md* con las peguntas respondidas
-- [ ] *dependencias.md* con las preguntas respondidas sobre las vulnerabilidades del proyecto
+- [x] *dependencias.md* con las preguntas respondidas sobre las vulnerabilidades del proyecto
 - [ ] *Links* a los ficheros en nuestro fork.
 
 ---
