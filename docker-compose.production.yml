@@ -6,9 +6,11 @@ services:
     ports: []
 
   app-blue:
+    image: ivancarreras/sportsclub:latest
     restart: always
 
   app-green:
+    image: ivancarreras/sportsclub:latest
     restart: always
 
   nginx:
