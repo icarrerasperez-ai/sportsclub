@@ -27,5 +27,5 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{ secrets.DOCKER_USERNAME }}/sportsclub-app:latest
+          tags: ${{ secrets.DOCKER_USERNAME }}/sportsclub:latest
           file: ./docker/app/Dockerfile
