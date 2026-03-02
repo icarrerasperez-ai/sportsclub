@@ -2,7 +2,7 @@ name: Docker-Publish
 
 on:
   workflow_run:
-    # workflows: ["CI"] # El workflow anterior
+    workflows: ["CI"] # El workflow anterior
     types:
       - completed
 
