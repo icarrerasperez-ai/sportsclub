@@ -1,0 +1,17 @@
+services:
+  postgres:
+    # Reiniciar siempre
+    restart: always
+    # Eliminamos los puertos abiertos al exterior
+    ports: !reset []
+
+  app-blue:
+    restart: always
+
+  app-green:
+    restart: always
+
+  nginx:
+    restart: always
+    ports:
+      - "80:80" # Asignamos 80:80 al exterior
