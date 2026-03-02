@@ -12,7 +12,7 @@ jobs:
   build-and-push:
     runs-on: ubuntu-latest
     # Solo se ejecuta si el workflow anterior se completo con exito
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout code
@@ -35,5 +35,4 @@ jobs:
           tags: |
             ${{ secrets.DOCKER_USERNAME }}/sportsclub-app:latest
             ${{ secrets.DOCKER_USERNAME }}/sportsclub-app:${{ github.sha }}
-          # Si tienes un Dockerfile específico para producción:
-          # file: ./docker/production/Dockerfile
+          file: ./docker/app/Dockerfile

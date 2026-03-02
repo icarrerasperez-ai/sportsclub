@@ -6,13 +6,6 @@ from .managers import SoftDeleteManager
 
 
 class Auditory(models.Model):
-    """
-    Base class for auditory fields with support for soft-deletion.
-    It does not implement anonymisation or purging of records.
-    It does not keep track of which user last performed a given operation.
-    """
-    # Esto es una clase abstracta lo que quiere decir que se comporta como una DB pero no guarda nada dentro de ninguna DB por tanto sus registros 
-    # no se eliminan sino que se marcan como eliminados y a la hora de recuperarlos se marcan como updated_at. Es decir nunca se llegan a eliminar los datos
 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
