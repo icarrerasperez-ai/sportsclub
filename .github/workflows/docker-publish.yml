@@ -2,11 +2,9 @@ name: Docker-Publish
 
 on:
   workflow_run:
-    workflows: ["ci"] # El workflow anterior
+    # workflows: ["CI"] # El workflow anterior
     types:
       - completed
-    branches:
-      - main 
 
 jobs:
   build-and-push:
@@ -24,15 +22,10 @@ jobs:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
 
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
       - name: Build and push
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
-          tags: |
-            ${{ secrets.DOCKER_USERNAME }}/sportsclub-app:latest
-            ${{ secrets.DOCKER_USERNAME }}/sportsclub-app:${{ github.sha }}
+          tags: ${{ secrets.DOCKER_USERNAME }}/sportsclub-app:latest
           file: ./docker/app/Dockerfile
