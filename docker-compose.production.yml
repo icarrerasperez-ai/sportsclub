@@ -3,7 +3,7 @@ services:
     # Reiniciar siempre
     restart: always
     # Eliminamos los puertos abiertos al exterior
-    ports: !reset []
+    ports: []
 
   app-blue:
     restart: always
